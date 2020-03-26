@@ -4,7 +4,7 @@
 }
 
 @font-face {
-    src: url(fonts/MajorMonoDisplay-Regular.ttf);
+    src: url(fonts/OvertheRainbow-Regular.ttf);
     font-family: mmono;
 }
 
@@ -36,27 +36,33 @@
 .mainContent {
     grid-area: main;
     background: url(images/georgie-cobbs-muOHbrFGEQY-unsplash.jpg) center no-repeat;
-    padding:17rem;
+    padding: 17rem 0;
     background-size: cover;
-    position: relative;;
+    position: relative;
 }
 
 .content {
     position: absolute;
-    top: 3%;
-    right: 20%;
+    display: flex;
+    flex-direction: column;
+    top:0;
+    right: 30%;
 }
 
 .brand {
     color: #0f1626;
     font-family: mmono;
-    font-size: 5rem;
+    font-size: 6rem;
+    margin-bottom: -2.5rem;
+    padding: 0;
 }
 
 .content h6 {
     color: #2d4a05;
     font-family: laila;
     font-size: 1.5rem;
+    padding: 0;
+    text-align:center;
 }
 
 @media (max-width: 731px) {
@@ -186,7 +192,6 @@
     position: absolute;
     top: 3%; 
     right: 35%;
-     
 }
 
 .portfolio h1 {
@@ -220,9 +225,16 @@
     grid-area: cnnt;
     background-color: #0f1626;
     display: flex;
+    flex-direction: column;
     align-content: center;
     padding: 3rem 0;
     
+}
+
+.connect-info {
+    font-family: vol;
+    text-align: center;
+    font-size: 2rem;
 }
 
 .connect-form {
