@@ -218,6 +218,62 @@
 }
 .connect {
     grid-area: cnnt;
+    background-color: #0f1626;
+    display: flex;
+    align-content: center;
+    padding: 3rem 0;
+    
+}
+
+.connect-form {
+    max-width: 620px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8d640;
+    padding: 2rem;
+    width: 50%;
+}
+
+.inputfields, .msg {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.inputfields .input, .msg textarea {
+    margin: 10px 0;
+    background: transparent;
+    border: 0rem;
+    border-bottom: 2px solid #0f1626;
+    color: black;
+    padding: 5px;
+    width: 100%;
+}
+
+.msg textarea {
+    height: 150px;
+}
+
+/*placeholder colors for chrome, firefox & IEx */
+::-webkit-input-placeholder {
+    color: #252c3a;
+}
+::-moz-placeholder {
+    color: #252c3a;
+}
+::-ms-placeholder {
+    color: #252c3a;
+}
+
+.button {
+    background-color: #0f1626;
+    text-align: center;
+    padding: 10px;
+    border-radius: 3px;
+    color: #f8d640;
+    font-family: laila;
+    cursor: pointer;
 }
 
 .footer {
