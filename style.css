@@ -1,0 +1,252 @@
+* { /*reseting the whole page*/
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    src: url(fonts/MajorMonoDisplay-Regular.ttf);
+    font-family: mmono;
+}
+
+.html {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "main main"
+    "abtMe abtMe"
+    "skl skl"
+    "port port"
+    "cnnt cnnt"
+    "footer footer";
+}
+
+@font-face {
+    src: url(fonts/Laila-Regular.ttf);
+    font-family: laila;
+}
+
+.mainContent {
+    grid-area: main;
+    background: url(images/georgie-cobbs-muOHbrFGEQY-unsplash.jpg) center no-repeat;
+    padding:17rem;
+    background-size: cover;
+    position: relative;;
+}
+
+.content {
+    position: absolute;
+    top: 3%;
+    right: 20%;
+}
+
+.brand {
+    color: #0f1626;
+    font-family: mmono;
+    font-size: 5rem;
+}
+
+.content h6 {
+    color: #2d4a05;
+    font-family: laila;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 731px) {
+    .container {
+        grid-template-columns: 100% auto;
+        grid-template-rows: 100% 100% auto;
+        grid-template-areas: 
+        "main"
+        "abtMe"
+        "skl"
+        "port"
+        "cnnt"
+        "footer";
+    }
+}
+
+ @media (max-width: 455px){
+     .content h1 {
+        font-size: 4.5rem;
+    }
+    .content h6 {
+        font-size: 1rem;
+    }
+ }
+
+ @media (max-width: 375px){
+     .content h1 {
+         font-size: 4rem;
+     }
+     .content h6 {
+         font-size: 1.1rem;
+     }
+ }
+
+.aboutMe {
+    grid-area: abtMe;
+    padding: 5rem;
+    background-color: #0f1626;
+    display: flex;
+    position: relative;
+}
+
+.aboutMe-img {
+    width: 70%;
+}
+
+.aboutMe-img::before{
+    position: absolute;
+    content: '';
+    right: -1px;
+    top: -7px;
+    border: 10px solid #f8d640;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutMe-img img {
+    width: 70%;
+    border-radius: 3rem;
+    display: block;
+}
+
+@font-face {
+    src: url(fonts/Voltaire-Regular.ttf);
+    font-family: vol;
+}
+
+.aboutMe-info h2 {
+    padding: 1.5rem;
+    font-family: vol;
+    font-size: 3rem;
+}
+
+.aboutMe-info p {
+    font-family: laila;
+}
+.skills {
+    grid-area: skl;
+    background-color: aliceblue;
+    padding: 5rem;
+    display: flex;
+}
+
+.skills h1 {
+    color: #2d4a05;
+    font-family: vol;
+    font-size: 3rem;
+}
+
+.skills p {
+    color: #2d4a05;
+    font-family: laila;
+    font-size: 1rem;
+}
+
+.skills-img {
+    width: 70%;
+}
+
+.skills-img img {
+    width: 50%;
+    padding: 0 2rem;
+}
+
+.portfolio {
+    grid-area: port;
+    width: 100%;
+    padding: 12rem 0;
+    background: url(images/ComingSoon.jpg) center no-repeat;
+    background-size: cover;
+    position: relative
+}
+
+.portfolio::before{
+    position: absolute;
+    content: '';
+    right: -1px;
+    top: -7px;
+    border: 10px solid #0f1626;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-info {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 3%; 
+    right: 35%;
+     
+}
+
+.portfolio h1 {
+    color: #0f1626;
+    font-family: vol;
+    font-size: 5rem;    
+}
+
+@media (max-width:620px) {
+    .portfolio h1 {
+        font-size: 4rem;
+    }
+    .portfolio-info {
+        top: 8%;
+        right: 20%;
+    }
+    .aboutMe {
+        flex-direction: column;
+    }
+    .aboutMe-info p {
+        font-size: 0.9rem;
+    }
+    .skills {
+        flex-direction: column;
+    }
+    .skills-img {
+        padding: 1.5rem;
+    }
+}
+.connect {
+    grid-area: cnnt;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #0f1626;
+    font-family: fantasy;
+    align-items: center;
+}
+
+.footerMenu {
+    margin: 1rem;
+    padding: 1rem 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex; /* will make item line up side by side*/
+}
+
+.footerItem {
+    list-style: none;  /*wont show dots of ul*/
+    padding: 0 1rem;
+    display: inline-block;
+    margin: auto;
+}
+
+.footerLink {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(217, 222, 226);
+    position: relative;
+    align-items: center;
+}
