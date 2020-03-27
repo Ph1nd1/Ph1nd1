@@ -55,6 +55,16 @@
     font-size: 6rem;
     margin-bottom: -2.5rem;
     padding: 0;
+    animation: text 2.5s;
+}
+
+@keyframes text {
+    30%{
+        letter-spacing: 25px;
+    }
+    80%{
+        letter-spacing: 0px;
+    }
 }
 
 .content h6 {
