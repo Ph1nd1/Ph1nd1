@@ -122,6 +122,9 @@ html {
     .logo {
         font-size: 50px;
     }
+    .content {
+        right: 15%;
+    }
 }
 
  @media (max-width: 455px){
@@ -265,74 +268,102 @@ html {
     .skills-img {
         padding: 1.5rem;
     }
+    .contact-info {
+        flex-direction: column;
+        min-width: 465px;
+    }
 }
+
 .connect {
     grid-area: cnnt;
     background-color: #0f1626;
     display: flex;
     flex-direction: column;
     align-content: center;
-    padding: 3rem 0;
+    padding: 5rem 0;
     
 }
 
-.connect-info {
+.connect h1 {
+    margin: 10px;
+    display: flex;
+    position: center;
+    align-items: center;
+    justify-content: center;
     font-family: vol;
-    text-align: center;
     font-size: 2rem;
 }
 
-.connect-form {
-    max-width: 620px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    background-color: #f8d640;
-    padding: 2rem;
-    width: 50%;
-}
-
-.inputfields, .msg {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-}
-
-.inputfields .input, .msg textarea {
-    margin: 10px 0;
-    background: transparent;
-    border: 0rem;
-    border-bottom: 2px solid #0f1626;
+.card p {
     color: black;
-    padding: 5px;
-    width: 100%;
-}
-
-.msg textarea {
-    height: 150px;
-}
-
-/*placeholder colors for chrome, firefox & IEx */
-::-webkit-input-placeholder {
-    color: #252c3a;
-}
-::-moz-placeholder {
-    color: #252c3a;
-}
-::-ms-placeholder {
-    color: #252c3a;
-}
-
-.button {
-    background-color: #0f1626;
-    text-align: center;
-    padding: 10px;
-    border-radius: 3px;
-    color: #f8d640;
     font-family: laila;
-    cursor: pointer;
 }
 
+.body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.contact-info {
+    display: flex;
+    width: 95%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18px; 
+}
+
+@media (max-width:620px) {
+    .contact-info {
+        flex-direction: column;
+        min-width: 465px;
+    }
+    .card p {
+        font-size: 10px;
+    }
+}
+
+.card {
+    background: #f0cb27;
+    padding: 0 20px;
+    margin: 50px 10px;
+    width: calc(33% - 20px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.card p {
+    font-size: 15px;
+    height: 300px;
+    opacity: 0;
+    transition: 0.6s linear;
+}
+
+.card:hover p{
+    opacity: 1;
+}
+
+.card i {
+    background: #0f1626;
+    color: #f8d640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    border-radius: 60px;
+    transition: 0.5s linear;
+}
+
+.card:hover i{
+    background: none;
+    color: #0f1626;
+    transform: scale(1.6);
+}
 .footer {
     grid-area: footer;
     background-color: #0f1626;
