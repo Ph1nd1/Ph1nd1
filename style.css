@@ -11,6 +11,10 @@ html {
     src: url(fonts/OvertheRainbow-Regular.ttf);
     font-family: mmono;
 }
+@font-face {
+    src: url(fonts/PoiretOne-Regular.ttf);
+    font-family: pone;
+}
 
 .container {
     width: 100%;
@@ -41,19 +45,21 @@ html {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #0f1626;
+    background-color: black;
 }
 
 .logo {
-    color: #f8d640;
-    font-family: mmono;
-    font-size: 28px;
+    color: rgb(235, 180, 41);
+    font-family: pone;
+    font-size: 30px;
+    padding: 10px;
+    letter-spacing: 8px;
 }
 
 .nav-links {
     display: flex;
     justify-content: space-around;
-    width: 50%;
+    width: 40%;
 }
 
 .nav-links li{
@@ -61,15 +67,16 @@ html {
 }
 
 .nav-links a{
-    color: #f8d640;
+    color: rgb(221, 129, 23);
     text-decoration: none;
-    font-family: laila;
+    font-family: pone;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .mainContent {
     grid-area: main;
-    background: url(images/georgie-cobbs-muOHbrFGEQY-unsplash.jpg) center no-repeat;
+    background: url(images/cropped.jpg) center no-repeat;
     padding: 17rem 0;
     background-size: cover;
     position: relative;
@@ -77,27 +84,34 @@ html {
 
 .content {
     position: absolute;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     top:0;
-    right: 25%;
+    right: 25%; */
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .brand {
-    color: #0f1626;
-    font-family: mmono;
-    font-size: 6rem;
-    margin-bottom: -2.5rem;
-    padding: 0;
+    color: rgb(235, 180, 41);
+    font-family: pone;
+    font-size: 3em;
+    margin-bottom: 1rem;
+    /* padding: 0; */
     animation: text 2.5s;
+    font-weight: bolder;
 }
 
 #text {
-    color: #2d4a05;
-    font-family: laila;
+    color: rgb(221, 129, 23);
+    font-family: pone;
     font-size: 1.5rem;
     padding: 0;
     text-align:center;
+    font-weight: bolder;
+
 }
 
 @media (max-width: 731px) {
@@ -148,7 +162,9 @@ html {
 .aboutMe {
     grid-area: abtMe;
     padding: 5rem;
-    background-color: #0f1626;
+    /* background: url(./images/philipp-berndt-5i0GnoTTjSE-unsplash.jpg) center no-repeat;
+    background-size: cover; */
+    background-color: rgb(3, 0, 0);
     display: flex;
     position: relative;
 }
@@ -162,7 +178,8 @@ html {
     content: '';
     right: -1px;
     top: -7px;
-    border: 10px solid #f8d640;
+    /* border: 10px solid rgb(221, 129, 23);
+    ; */
     width: 100%;
     height: 100%;
 }
@@ -182,70 +199,96 @@ html {
     padding: 1.5rem;
     font-family: vol;
     font-size: 3rem;
+    color: rgb(235, 180, 41);
 }
 
 .aboutMe-info p {
     font-family: laila;
+    color: rgb(221, 129, 23);
 }
 .skills {
     grid-area: skl;
-    background-color: aliceblue;
+    background: url(./images/nhu-nguyen-kr-jmsASg8M-unsplash.jpg) center no-repeat;
+    background-size: cover;
+    /* background-color: black; */
     padding: 5rem;
     display: flex;
 }
 
 .skills h1 {
-    color: #2d4a05;
+    color: rgb(235, 180, 41);
     font-family: vol;
     font-size: 3rem;
 }
-
-.skills p {
-    color: #2d4a05;
-    font-family: laila;
-    font-size: 1rem;
+.skills-info {
+    padding: 0 3rem 0 0;
 }
 
 .skills-img {
-    width: 70%;
+    /* width: 70%; */
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    grid-auto-rows: 140px;
+    align-items: center;
 }
 
 .skills-img img {
-    width: 50%;
-    padding: 0 2rem;
+    width: 90%;
+    padding: 0 1rem;
 }
 
 .portfolio {
     grid-area: port;
-    width: 100%;
-    padding: 12rem 0;
-    background: url(images/ComingSoon.jpg) center no-repeat;
-    background-size: cover;
-    position: relative
+    /* width: 100%; */
+    padding: 4rem 0 4rem 0;
+    position: relative;
+    background-color: black;
+}
+.portfolio-info {
+    padding: 2rem;
 }
 
-.portfolio::before{
-    position: absolute;
-    content: '';
-    right: -1px;
-    top: -7px;
-    border: 10px solid #0f1626;
+.containerr > div {
+    display: flex;
+    /* justify-content: center; */
+    transition: .4s ease-in-out;
+}
+
+.containerr > div > a > img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
+}
+ .containerr > div:hover {
+    transform: scale(.96);
+    /* opacity: 0.95; */
+ }
+
+.containerr {
+    display: grid;
+    padding: 2rem;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    grid-auto-rows: 170px;
 }
 
-.portfolio-info {
+.containerr > div > h1 {
+    position: relative;
     display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 3%; 
-    right: 35%;
+    /* flex-direction: column; */
+    text-align: center;
+    margin: 1em;
+    font-family: pone;
+    font-size: 30px;
+    color: rgb(221, 129, 23);
 }
 
 .portfolio h1 {
-    color: #0f1626;
+    color: rgb(235, 180, 41);
     font-family: vol;
-    font-size: 5rem;    
+    font-size: 3rem; 
+    text-align: center;
 }
 
 @media (max-width:620px) {
@@ -276,7 +319,7 @@ html {
 
 .connect {
     grid-area: cnnt;
-    background-color: #0f1626;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -292,6 +335,7 @@ html {
     justify-content: center;
     font-family: vol;
     font-size: 2rem;
+    color: aliceblue;
 }
 
 .card p {
@@ -349,7 +393,7 @@ html {
 }
 
 .card i {
-    background: #0f1626;
+    background: black;
     color: #f8d640;
     display: flex;
     justify-content: center;
@@ -361,12 +405,12 @@ html {
 
 .card:hover i{
     background: none;
-    color: #0f1626;
+    color: black;
     transform: scale(1.6);
 }
 .footer {
     grid-area: footer;
-    background-color: #0f1626;
+    background-color: black;
     font-family: fantasy;
     align-items: center;
 }
@@ -374,7 +418,7 @@ html {
 .footerMenu {
     margin: 1rem;
     padding: 1rem 0;
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     align-items: center;
     display: flex; /* will make item line up side by side*/
