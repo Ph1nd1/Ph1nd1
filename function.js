@@ -5,9 +5,6 @@ var i=0,text;
         if(i<text.length){
             document.getElementById("text").innerHTML += text.charAt(i); i++;   
         }
-        // if(i === text.length){
-        //     i = 0;
-        // }
         setTimeout(typing,120);
     }
     typing();
