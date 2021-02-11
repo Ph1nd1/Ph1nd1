@@ -325,6 +325,11 @@ html {
     padding: 0 18px; 
 }
 
+@media (min-width: 650px) {
+    .footerLinkSide {
+        font-size: 18px;
+    }
+}
 @media (max-width:620px) {
     .content h1 {
         font-size: 2.5rem;
@@ -421,4 +426,13 @@ html {
     position: relative;
     align-items: center;
     font-size: 18px;
+}
+
+.footerLinkSide {
+    text-decoration: none;
+    font-weight: bold;
+    color: #f8d640;
+    position: relative;
+    align-items: center;
+    font-size: 30px;
 }
